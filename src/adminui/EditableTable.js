@@ -16,7 +16,6 @@ import { GET_DATA_URL } from "../constants";
 const { Search } = Input;
 
 const originData = [];
-
 const EditableCell = ({
   editing,
   dataIndex,
@@ -235,7 +234,7 @@ const EditableTable = () => {
   };
 
   const onSearchChange = (e) => {
-    setFilter(e.target.value);
+    setFilter(e.target.value.toLowerCase());
   };
   if (loading) {
     return <Spin />;
